@@ -16,9 +16,10 @@ var arr = [
     },
 ];
 
+// option 1
+const pattern = /^[a-zA-Z0-9]+\.[a-zA-Z0-9]+@\byahoo\b|\bgmail\b\.\bcom\b$/g;
 
 function email_checker(data) {
-    const pattern = /^[a-zA-Z0-9]+\.[a-zA-Z0-9]+@\byahoo\b|\bgmail\b\.\bcom\b$/g;
     for (element of data) {
         const isMatch = pattern.test(element.email);
         if (isMatch) console.log(element.email);
@@ -26,3 +27,10 @@ function email_checker(data) {
 }
 
 email_checker(arr);
+
+
+// option 2
+
+arr.forEach(element => {
+    if (pattern.test(element.email)) console.log(element.email);
+});
