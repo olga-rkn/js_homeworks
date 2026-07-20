@@ -17,7 +17,7 @@ var arr = [
 ];
 
 // option 1
-const pattern = /^[a-zA-Z0-9]+\.[a-zA-Z0-9]+@\byahoo\b|\bgmail\b\.\bcom\b$/g;
+const pattern = /^[a-zA-Z0-9]+\.[a-zA-Z0-9]+@\byahoo\b|\bgmail\b\.\bcom\b$/;
 
 function email_checker(data) {
     for (element of data) {
